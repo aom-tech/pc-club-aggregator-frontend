@@ -1,0 +1,47 @@
+import Logo from "./ui/PCAggregator.svg";
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+
+export default function Header() {
+    return (
+        <header className='flex justify-between items-center py-3 px-6'>
+            <nav className='items-left '>
+                <ul className='flex gap-8 flex-row'>
+                    <li>
+                        <a
+                            className='text-base font-regular text-white'
+                            href='#'
+                        >
+                            Главная
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            className='text-base font-regular text-white'
+                            href='#about'
+                        >
+                            О нас
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            className='text-base font-regular text-white'
+                            href='#contact'
+                        >
+                            Контакты
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div className='absolute -translate-x-2/4 left-2/4'>
+                <Link href='/'>
+                    <Image src={Logo} alt='Logo' width={260} height={17} />
+                </Link>
+            </div>
+            <div className='flex items-right'>
+                <Button variant="destructive" className="text-black hover:text-white hover:border bg-[#E1E7EF] rounded-[6px]">Sign Up</Button>
+            </div>
+        </header>
+    );
+}
