@@ -22,6 +22,18 @@ const config = {
         bicubik: 'var(--font-bicubik)',
         sans: ['var(--font-montserrat)'],
       },
+      fontSize: {
+        detail: ['16px', '24px'],
+        small: ['16px', '28px'],
+        logo: ['24px', '120%'],
+        display: ['96px', '120%'],
+        h1: ['48px', '48px'],
+        h2: ['30px', '36px'],
+        h3: ['24px', '30px'],
+        h4: ['20px', '32px'],
+        h5: ['18px', '28px'],
+        p: ['20px', '120%'],
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
@@ -56,6 +68,7 @@ const config = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
+        detail: 'rgba(255, 255, 255, 0.4)',
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -82,4 +95,3 @@ const config = {
 } satisfies Config
 
 export default config
-
