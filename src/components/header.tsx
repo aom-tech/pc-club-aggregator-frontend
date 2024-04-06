@@ -36,11 +36,11 @@ export default function Header() {
             </nav>
             <div className='absolute -translate-x-2/4 left-2/4'>
                 <Link href='/'>
-                    <Image src={Logo} alt='Logo' width={260} height={17} />
+                    <Image src={"/PCAggregator.svg"} alt='Logo' width={260} height={17} />
                 </Link>
             </div>
             <div className='flex items-right'>
-                <Button variant="destructive" className="text-black hover:text-white hover:border bg-[#E1E7EF] rounded-[6px]">Sign Up</Button>
+                <Button variant={"outline"} className='hover:bg-black hover:text-white'>Войти</Button>
             </div>
         </header>
     );
