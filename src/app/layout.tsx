@@ -20,29 +20,25 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({
-    children,
+  children,
 }: Readonly<{
-    children: React.ReactNode;
+  children: React.ReactNode
 }>) {
-    return (
-        <html
-            lang="en"
-            className={`${montserrat.variable} ${bicubik.variable}`}
+  return (
+    <html
+      lang="en"
+      className={`${montserrat.variable} ${bicubik.variable}`}
+    >
+      <body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
         >
-            <body>
-                <ThemeProviders
-                    attribute="class"
-                    defaultTheme="dark"
-                    enableSystem
-                    disableTransitionOnChange
-                >
-                    <Container>
-                        <Header />
-                        {children}
-                        <Footer />
-                    </Container>
-                </ThemeProviders>
-            </body>
-        </html>
-    );
+          {children}
+        </ThemeProvider>
+      </body>
+    </html>
+  )
 }
