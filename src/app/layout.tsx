@@ -32,6 +32,7 @@ export default function RootLayout({
         <html
             lang="en"
             className={`${montserrat.variable} ${bicubik.variable}`}
+            suppressHydrationWarning
         >
             <body>
                 <ThemeProvider

@@ -1,5 +1,3 @@
-import Logo from './ui/PCAggregator.svg'
-import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 
@@ -9,26 +7,17 @@ export default function Header() {
             <nav className="items-left ">
                 <ul className="hidden flex-row gap-8 lg:flex">
                     <li>
-                        <a
-                            className="font-regular text-base text-white"
-                            href="#"
-                        >
+                        <a className="font-regular text-base" href="#">
                             Главная
                         </a>
                     </li>
                     <li>
-                        <a
-                            className="font-regular text-base text-white"
-                            href="#about"
-                        >
+                        <a className="font-regular text-base" href="#about">
                             О нас
                         </a>
                     </li>
                     <li>
-                        <a
-                            className="font-regular text-base text-white"
-                            href="#contact"
-                        >
+                        <a className="font-regular text-base" href="#contact">
                             Контакты
                         </a>
                     </li>
@@ -36,24 +25,15 @@ export default function Header() {
             </nav>
             <div className="left lg:absolute lg:left-2/4 lg:mt-auto lg:-translate-x-2/4">
                 <Link href="/#">
-                    <Image
-                        src={'/PCAggregator.svg'}
-                        alt="Logo"
-                        width={260}
-                        height={17}
-                    />
+                    <span className="font-bicubik text-logo">PCAggregator</span>
+                    
                 </Link>
             </div>
             <div className="items-right hidden lg:flex">
-                <Button
-                    variant={'outline'}
-                    className="hover:bg-black hover:text-white"
-                >
-                    Войти
-                </Button>
+                <Button variant={'default'}>Войти</Button>
             </div>
             <div className="lg:hidden">
-                <button className="text-white">
+                <Button size="icon" variant="ghost">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="h-6 w-6"
@@ -68,7 +48,7 @@ export default function Header() {
                             d="M4 6h16M4 12h16m-7 6h7"
                         />
                     </svg>
-                </button>
+                </Button>
             </div>
         </header>
     )

@@ -3,10 +3,10 @@ import Image from 'next/image'
 
 export default function Footer() {
     return (
-        <footer className="w-100vw sm:gap-auto mt-auto flex flex-col items-center justify-between gap-8 px-12 py-10 text-white sm:flex-row sm:items-center sm:justify-between">
+        <footer className="w-100vw sm:gap-auto mt-auto flex flex-col items-center justify-between gap-8 px-12 py-10 sm:flex-row sm:items-center sm:justify-between">
             <Link href="/">
                 <Image
-                    src={'/pcca-logo.svg'}
+                    src={'/pca-logo.svg'}
                     alt="Logo"
                     width={100}
                     height={100}
@@ -18,7 +18,7 @@ export default function Footer() {
                     <p className=" text-lg font-semibold">Контакты</p>
                     <Link
                         href="https://telegram.org"
-                        className="  flex  flex-row items-center gap-2 text-white"
+                        className="  flex  flex-row items-center gap-2 "
                     >
                         <Image
                             src={'/tg-logo.svg'}
@@ -26,11 +26,11 @@ export default function Footer() {
                             width={13}
                             height={13}
                         />
-                        <span className="opacity-40">Телеграм</span>
+                        <span className="text-detail">Телеграм</span>
                     </Link>
                     <Link
                         href="https://vk.com"
-                        className="  flex flex-row items-center gap-2 text-white"
+                        className="  flex flex-row items-center gap-2 "
                     >
                         <Image
                             src={'/vk-logo.svg'}
@@ -38,11 +38,11 @@ export default function Footer() {
                             width={13}
                             height={11}
                         />
-                        <span className="opacity-40">Вконтакте</span>
+                        <span className="text-detail">Вконтакте</span>
                     </Link>
                     <Link
                         href="https://whatsapp.com"
-                        className="  flex flex-row items-center gap-2 text-white"
+                        className="  flex flex-row items-center gap-2"
                     >
                         <Image
                             src={'/wa-logo.svg'}
@@ -50,12 +50,12 @@ export default function Footer() {
                             width={13}
                             height={11}
                         />
-                        <span className="opacity-40">WhatsApp</span>
+                        <span className="text-detail">WhatsApp</span>
                     </Link>
                 </div>
                 <div className="hidden max-w-[27.75rem] flex-col items-start justify-start gap-1 lg:flex">
                     <p className=" text-lg font-semibold">О нас</p>
-                    <p className=" text-white opacity-40">
+                    <p className="text-detail">
                         Присоединяйтесь к нам и окунитесь в захватывающий мир
                         игр и технологий вместе с нашим комьюнити компьютерных
                         энтузиастов!
@@ -67,13 +67,13 @@ export default function Footer() {
                     </p>
                     <Link
                         href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                        className=" text-white underline opacity-40"
+                        className=" text-detail underline"
                     >
                         Политика конфиденциальности
                     </Link>
                     <Link
                         href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                        className=" text-white underline opacity-40"
+                        className=" text-detail underline"
                     >
                         Условия использования
                     </Link>
