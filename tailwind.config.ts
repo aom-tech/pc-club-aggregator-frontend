@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      backgroundImage: {
+        hero: 'url("/hero.jpg")',
+      },
       fontFamily: {
         bicubik: 'var(--font-bicubik)',
         sans: ['var(--font-montserrat)'],
