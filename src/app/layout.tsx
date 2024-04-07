@@ -4,9 +4,9 @@ import localFont from 'next/font/local'
 import './globals.css'
 import { ThemeProvider } from '@/components/ThemeProvider'
 
-import Header from '@/components/header'
-import Footer from '@/components/footer'
-import Container from '@/components/container'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+import Container from '@/components/Container'
 
 const bicubik = localFont({
     variable: '--font-bicubik',
