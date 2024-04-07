@@ -1,85 +1,84 @@
-import Link from "next/link";
-import Image from "next/image";
+import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Footer() {
     return (
-            <footer className='mt-auto py-10 px-12 w-100vw text-white flex flex-col items-center justify-between gap-8 sm:gap-auto sm:flex-row sm:items-center sm:justify-between'>
+        <footer className="w-100vw sm:gap-auto mt-auto flex flex-col items-center justify-between gap-8 px-12 py-10 text-white sm:flex-row sm:items-center sm:justify-between">
+            <Link href="/">
+                <Image
+                    src={'/pcca-logo.svg'}
+                    alt="Logo"
+                    width={100}
+                    height={100}
+                />
+            </Link>
 
-                <Link href='/'>
-                    <Image
-                        src={"/pcca-logo.svg"}
-                        alt='Logo'
-                        width={100}
-                        height={100}
-                    />
-                </Link>
-
-            <div className='flex flex-row items-top justify-center gap-16'>
-                <div className='hidden lg:flex flex-col items-start justify-start gap-1'>
-                    <p className=' text-lg font-semibold'>Контакты</p>
+            <div className="items-top flex flex-row justify-center gap-16">
+                <div className="hidden flex-col items-start justify-start gap-1 lg:flex">
+                    <p className=" text-lg font-semibold">Контакты</p>
                     <Link
-                        href='https://telegram.org'
-                        className='  text-white  flex flex-row items-center gap-2'
+                        href="https://telegram.org"
+                        className="  flex  flex-row items-center gap-2 text-white"
                     >
                         <Image
-                            src={"/tg-logo.svg"}
-                            alt='Logo'
+                            src={'/tg-logo.svg'}
+                            alt="Logo"
                             width={13}
                             height={13}
                         />
-                        <span className='opacity-40'>Телеграм</span>
+                        <span className="opacity-40">Телеграм</span>
                     </Link>
                     <Link
-                        href='https://vk.com'
-                        className='  text-white flex flex-row items-center gap-2'
+                        href="https://vk.com"
+                        className="  flex flex-row items-center gap-2 text-white"
                     >
                         <Image
-                            src={"/vk-logo.svg"}
-                            alt='Logo'
+                            src={'/vk-logo.svg'}
+                            alt="Logo"
                             width={13}
                             height={11}
                         />
-                        <span className='opacity-40'>Вконтакте</span>
+                        <span className="opacity-40">Вконтакте</span>
                     </Link>
                     <Link
-                        href='https://whatsapp.com'
-                        className='  text-white flex flex-row items-center gap-2'
+                        href="https://whatsapp.com"
+                        className="  flex flex-row items-center gap-2 text-white"
                     >
                         <Image
-                            src={"/wa-logo.svg"}
-                            alt='Logo'
+                            src={'/wa-logo.svg'}
+                            alt="Logo"
                             width={13}
                             height={11}
                         />
-                        <span className='opacity-40'>WhatsApp</span>
+                        <span className="opacity-40">WhatsApp</span>
                     </Link>
                 </div>
-                <div className='hidden lg:flex flex-col items-start justify-start max-w-[27.75rem] gap-1'>
-                    <p className=' text-lg font-semibold'>О нас</p>
-                    <p className=' text-white opacity-40'>
+                <div className="hidden max-w-[27.75rem] flex-col items-start justify-start gap-1 lg:flex">
+                    <p className=" text-lg font-semibold">О нас</p>
+                    <p className=" text-white opacity-40">
                         Присоединяйтесь к нам и окунитесь в захватывающий мир
                         игр и технологий вместе с нашим комьюнити компьютерных
                         энтузиастов!
                     </p>
                 </div>
-                <div className='flex flex-col items-center sm:items-start justify-start gap-1'>
-                    <p className='hidden lg:flex text-lg font-semibold '>
+                <div className="flex flex-col items-center justify-start gap-1 sm:items-start">
+                    <p className="hidden text-lg font-semibold lg:flex ">
                         Информация
                     </p>
                     <Link
-                        href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'
-                        className=' text-white opacity-40 underline'
+                        href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                        className=" text-white underline opacity-40"
                     >
                         Политика конфиденциальности
                     </Link>
                     <Link
-                        href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'
-                        className=' text-white opacity-40 underline'
+                        href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                        className=" text-white underline opacity-40"
                     >
                         Условия использования
                     </Link>
                 </div>
             </div>
         </footer>
-    );
+    )
 }
