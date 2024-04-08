@@ -19,28 +19,28 @@ const ClubDescription: React.FC = () => {
         <h1 className="font-bicubik">Контакты</h1>
         <div className="flex flex-col gap-2">
           <Contact
-            alt="Phone"
+            href="https://telegram.org"
             src="/phone.svg"
             width={24}
             height={24}
             text="+7 (987) 654 3210"
           />
           <Contact
-            alt="Telegram"
+            href="https://telegram.org"
             src="/tg-logo-trans.svg"
             width={24}
             height={24}
             text="Telegram"
           />
           <Contact
-            alt="Vkontakte"
+            href="https://vk.com"
             src="/vk-logo-trans.svg"
             width={24}
             height={24}
             text="Vkontakte"
           />
           <Contact
-            alt="WhatsApp"
+            href="https://whatsapp.com"
             src="/wa-logo-trans.svg"
             width={24}
             height={24}
