@@ -32,7 +32,7 @@ export default function HamburgerModal() {
                 </Button>
             </SheetTrigger>
             <SheetContent cross={false}>
-                <SheetHeader className="w-100%  flex-row-reverse justify-between">
+                <SheetHeader className="w-100%  flex-row-reverse justify-between border-b pb-2">
                     <SheetClose asChild className="right-0">
                         <Button size="icon" variant="ghost">
                             <svg
@@ -52,33 +52,30 @@ export default function HamburgerModal() {
                         </Button>
                     </SheetClose>
 
-                    <Button variant={'default'} className="mt-16">
+                    <Button variant={'default'} className="mt-0">
                         Войти
                     </Button>
                 </SheetHeader>
 
-                <nav className="items-left">
+                <nav className="items-left ">
                     <ul className="mt-10 flex flex-col gap-8">
                         <SheetClose asChild>
                             <li>
-                                <a className="font-h1 text-base" href="#">
+                                <a className="text-h4" href="#">
                                     Главная
                                 </a>
                             </li>
                         </SheetClose>
                         <SheetClose asChild>
                             <li>
-                                <a className="font-h1 text-base" href="#about">
+                                <a className="text-h4" href="#about">
                                     О нас
                                 </a>
                             </li>
                         </SheetClose>
                         <SheetClose asChild>
                             <li>
-                                <a
-                                    className="font-h1 text-base"
-                                    href="#contact"
-                                >
+                                <a className="text-h4" href="#contact">
                                     Контакты
                                 </a>
                             </li>
