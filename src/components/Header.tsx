@@ -1,6 +1,8 @@
+
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import HamburgerModal from './HamburgerModal'
+import NameLogo from './NameLogo'
 
 export default function Header() {
   return (
@@ -24,16 +26,7 @@ export default function Header() {
           </li>
         </ul>
       </nav>
-      <div className="left lg:absolute lg:left-2/4 lg:mt-auto lg:-translate-x-2/4">
-        <Link href="/#">
-          <span
-            className="font-bicubik text-logo"
-            style={{ WebkitTextStroke: '1px' }}
-          >
-            PCAggregator
-          </span>
-        </Link>
-      </div>
+      <NameLogo />
       <div className="items-right hidden lg:flex">
         <Button variant={'default'}>Войти</Button>
       </div>
