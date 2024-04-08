@@ -28,7 +28,7 @@ export default function Header() {
       </nav>
       <NameLogo />
       <div className="items-right hidden lg:flex">
-        <Button variant={'default'}>Войти</Button>
+        <Button variant={'default'} className='rounded-none'>Войти</Button>
       </div>
       <div className="lg:hidden">
         <HamburgerModal />

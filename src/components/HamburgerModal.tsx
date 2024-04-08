@@ -52,7 +52,7 @@ export default function HamburgerModal() {
             </Button>
           </SheetClose>
 
-          <Button variant={'default'} className="mt-0">
+          <Button variant={'default'} className="rounded-none m-0">
             Войти
           </Button>
         </SheetHeader>
