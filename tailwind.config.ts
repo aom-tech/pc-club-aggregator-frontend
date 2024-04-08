@@ -19,7 +19,7 @@ const config = {
     },
     extend: {
       backgroundImage: {
-        hero: 'url("/hero.jpg")',
+        hero: `linear-gradient(to right, #000000, transparent, #000000), url("/hero.jpg")`,
       },
       fontFamily: {
         bicubik: 'var(--font-bicubik)',
@@ -27,6 +27,7 @@ const config = {
       },
       fontSize: {
         detail: ['16px', '24px'],
+        extrasmall: ['12px', '28px'],
         small: ['16px', '28px'],
         logo: ['24px', '120%'],
         display: ['96px', '120%'],
