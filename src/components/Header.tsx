@@ -1,9 +1,10 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
+import HamburgerModal from './HamburgerModal'
 
 export default function Header() {
     return (
-        <header className="sticky top-0 flex items-center justify-between px-6 py-4 lg:static lg:py-3">
+        <header className="sticky top-0 flex items-center justify-between px-6 py-6 lg:static lg:py-3">
             <nav className="items-left ">
                 <ul className="hidden flex-row gap-8 lg:flex">
                     <li>
@@ -33,22 +34,7 @@ export default function Header() {
                 <Button variant={'default'}>Войти</Button>
             </div>
             <div className="lg:hidden">
-                <Button size="icon" variant="ghost">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-6 w-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                    >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M4 6h16M4 12h16m-7 6h7"
-                        />
-                    </svg>
-                </Button>
+                <HamburgerModal/>
             </div>
         </header>
     )
