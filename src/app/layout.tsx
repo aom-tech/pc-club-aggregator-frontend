@@ -4,6 +4,10 @@ import localFont from 'next/font/local'
 import './globals.css'
 import { ThemeProvider } from '@/components/ThemeProvider'
 
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+import Container from '@/components/Container'
+
 const bicubik = localFont({
   variable: '--font-bicubik',
   src: './Bicubik.otf',
@@ -28,6 +32,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${montserrat.variable} ${bicubik.variable}`}
+      suppressHydrationWarning
     >
       <body>
         <ThemeProvider
@@ -36,7 +41,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <Container>
+            <Header />
+            {children}
+            <Footer />
+          </Container>
         </ThemeProvider>
       </body>
     </html>
