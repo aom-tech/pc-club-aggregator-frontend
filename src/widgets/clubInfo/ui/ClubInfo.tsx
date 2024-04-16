@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import RatingClub from '@/components/RatingClub'
-import AvailablePlaces from '@/components/AvailablePlaces'
+import RatingClub from './RatingClub'
+import AvailablePlaces from './AvailablePlaces'
 import { Button } from '@/shared/ui/button'
 
 const ClubInfo: React.FC = () => {

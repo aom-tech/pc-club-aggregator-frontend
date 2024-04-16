@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
 import localFont from 'next/font/local'
 import './globals.css'
-import { ThemeProvider } from '@/components/ThemeProvider'
+import ThemeProvider from './_providers/ThemeProvider'
+import Container from './_container/Container'
 
 import Header from '@/widgets/header'
 import Footer from '@/widgets/footer'
-import Container from '@/components/Container'
 
 const bicubik = localFont({
   variable: '--font-bicubik',
