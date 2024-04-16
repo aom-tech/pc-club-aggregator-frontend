@@ -4,7 +4,7 @@ import localFont from 'next/font/local'
 import './globals.css'
 import { ThemeProvider } from '@/components/ThemeProvider'
 
-import Header from '@/components/Header'
+import Header from '@/widgets/header'
 import Footer from '@/components/Footer'
 import Container from '@/components/Container'
 
