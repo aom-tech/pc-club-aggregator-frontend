@@ -4,7 +4,7 @@ import NameLogo from './NameLogo'
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-10 flex items-center justify-between bg-background bg-opacity-100 px-6 py-6 lg:static lg:py-3">
+    <header className="sticky top-0 z-10 flex items-center justify-between bg-background/90 px-6 py-6 lg:static lg:py-3">
       <nav className="items-left hidden lg:flex">
         <ul className="flex flex-row gap-8">
           <li>
