@@ -5,7 +5,7 @@ import './globals.css'
 import { ThemeProvider } from '@/components/ThemeProvider'
 
 import Header from '@/widgets/header'
-import Footer from '@/components/Footer'
+import Footer from '@/widgets/footer'
 import Container from '@/components/Container'
 
 const bicubik = localFont({
