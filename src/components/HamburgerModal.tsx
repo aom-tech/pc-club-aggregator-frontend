@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button'
+import { Button } from '@/shared/ui/button'
 import {
   Sheet,
   SheetClose,
@@ -6,7 +6,7 @@ import {
   SheetFooter,
   SheetHeader,
   SheetTrigger,
-} from '@/components/ui/sheet'
+} from '@/shared/ui/sheet'
 
 export default function HamburgerModal() {
   return (
@@ -50,7 +50,7 @@ export default function HamburgerModal() {
             </Button>
           </SheetClose>
 
-          <Button variant={'default'} className="rounded-none m-0">
+          <Button variant={'default'} className="m-0 rounded-none">
             Войти
           </Button>
         </SheetHeader>
@@ -80,8 +80,7 @@ export default function HamburgerModal() {
             </SheetClose>
           </ul>
         </nav>
-        <SheetFooter>
-        </SheetFooter>
+        <SheetFooter></SheetFooter>
       </SheetContent>
     </Sheet>
   )
