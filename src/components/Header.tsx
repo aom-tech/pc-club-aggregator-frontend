@@ -1,14 +1,12 @@
-
-import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import HamburgerModal from './HamburgerModal'
 import NameLogo from './NameLogo'
 
 export default function Header() {
   return (
-    <header className="sticky top-0 flex items-center justify-between px-6 py-6 lg:static lg:py-3">
-      <nav className="items-left ">
-        <ul className="hidden flex-row gap-8 lg:flex">
+    <header className="sticky top-0 z-10 flex items-center justify-between bg-background bg-opacity-100 px-6 py-6 lg:static lg:py-3">
+      <nav className="items-left hidden lg:flex">
+        <ul className="flex flex-row gap-8">
           <li>
             <a className="text-h4" href="#">
               Главная
@@ -27,8 +25,10 @@ export default function Header() {
         </ul>
       </nav>
       <NameLogo />
-      <div className="items-right hidden lg:flex">
-        <Button variant={'default'} className='rounded-none'>Войти</Button>
+      <div className="hidden lg:flex">
+        <Button variant={'default'} className="rounded-none">
+          Войти
+        </Button>
       </div>
       <div className="lg:hidden">
         <HamburgerModal />

@@ -3,10 +3,8 @@ import {
   Sheet,
   SheetClose,
   SheetContent,
-  SheetDescription,
   SheetFooter,
   SheetHeader,
-  SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet'
 
@@ -83,9 +81,6 @@ export default function HamburgerModal() {
           </ul>
         </nav>
         <SheetFooter>
-          {/* <SheetClose asChild>
-                        <Button type="submit">Save changes</Button>
-                    </SheetClose> */}
         </SheetFooter>
       </SheetContent>
     </Sheet>
