@@ -1,6 +1,6 @@
-import ClubDescription from '@/components/ClubDescription'
-import ClubInfo from '@/components/ClubInfo'
-import Hero from '@/components/Hero'
+import ClubInfo from '@/widgets/clubInfo'
+import Hero from './Hero'
+import ClubDescription from './ClubDescription'
 
 const ClubPage: React.FC = () => {
   return (

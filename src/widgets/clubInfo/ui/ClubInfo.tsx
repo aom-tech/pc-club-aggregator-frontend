@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import RatingClub from './RatingClub'
 import AvailablePlaces from './AvailablePlaces'
-import { Button } from './ui/button'
+import { Button } from '@/shared/ui/button'
 
 const ClubInfo: React.FC = () => {
   return (
@@ -21,12 +21,12 @@ const ClubInfo: React.FC = () => {
         />
       </div>
       <section className="flex w-full flex-col gap-5 lg:justify-between">
-        <h1 className="text-h2 lg:text-h1 font-bicubik">Беляево</h1>
+        <h1 className="font-bicubik text-h2 lg:text-h1">Беляево</h1>
         <article className="flex flex-col gap-2">
           <h5 className="text-small lg:text-h5">
             г. Москва, ул. Профсоюзная, 102а, этаж 2, ТЦ Белка
           </h5>
-          <h5 className="text-small lg:text-h5 font-bicubik">
+          <h5 className="font-bicubik text-small lg:text-h5">
             +7 (987) 654 3210
           </h5>
         </article>

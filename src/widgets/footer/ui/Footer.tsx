@@ -1,17 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-
-type LinkItem = {
-  href: string;
-  icon: string;
-  text: string;
-};
-
-const links: LinkItem[] = [
-  { href: 'https://telegram.org', icon: '/tg-logo.svg', text: 'Телеграм' },
-  { href: 'https://vk.com', icon: '/vk-logo.svg', text: 'Вконтакте' },
-  { href: 'https://whatsapp.com', icon: '/wa-logo.svg', text: 'WhatsApp' },
-];
+import { links } from '@/widgets/footer/model'
 
 export default function Footer() {
   return (
@@ -61,5 +50,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  );
+  )
 }
