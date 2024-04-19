@@ -10,13 +10,13 @@ const ClubDescription: React.FC = () => {
   return (
     <>
       <article className="flex w-full flex-col gap-5">
-        <h1 className="font-bicubik text-h2 lg:text-h1">Описание</h1>
-        <p className="whitespace-pre-wrap text-h5 lg:text-p">
+        <h1 className="font-bicubik text-xl lg:text-2xl">Описание</h1>
+        <p className="lg:text-md120 whitespace-pre-wrap text-sm">
           {loremText1 + '\n\n' + loremText2}
         </p>
       </article>
       <article className="flex w-full flex-col gap-5">
-        <h1 className="font-bicubik text-h2 lg:text-h1">Контакты</h1>
+        <h1 className="font-bicubik text-xl lg:text-2xl">Контакты</h1>
         <div className="flex flex-col gap-2">
           <Contact
             href="https://telegram.org"

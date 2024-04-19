@@ -10,7 +10,7 @@ const Contact: React.FC<ContactProps> = ({ text, href, ...props }) => {
   return (
     <Link href={href} className="flex gap-[10px]">
       <Image {...props} alt={text} />
-      <span className="text-small">{text}</span>
+      <span className="text-xs">{text}</span>
     </Link>
   )
 }

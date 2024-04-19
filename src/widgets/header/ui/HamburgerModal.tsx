@@ -30,7 +30,7 @@ export default function HamburgerModal() {
         </Button>
       </SheetTrigger>
       <SheetContent cross={false}>
-        <SheetHeader className="w-100%  flex-row-reverse justify-between border-b pb-2">
+        <SheetHeader className="w-100% flex-row-reverse justify-between border-b pb-2">
           <SheetClose asChild className="right-0">
             <Button size="icon" variant="ghost">
               <svg
@@ -55,25 +55,25 @@ export default function HamburgerModal() {
           </Button>
         </SheetHeader>
 
-        <nav className="items-left ">
+        <nav className="items-left">
           <ul className="mt-10 flex flex-col gap-8">
             <SheetClose asChild>
               <li>
-                <a className="text-h4" href="#">
+                <a className="text-md" href="#">
                   Главная
                 </a>
               </li>
             </SheetClose>
             <SheetClose asChild>
               <li>
-                <a className="text-h4" href="#about">
+                <a className="text-md" href="#about">
                   О нас
                 </a>
               </li>
             </SheetClose>
             <SheetClose asChild>
               <li>
-                <a className="text-h4" href="#contact">
+                <a className="text-md" href="#contact">
                   Контакты
                 </a>
               </li>
