@@ -43,7 +43,9 @@ export default function RootLayout({
         >
           <Container>
             <Header />
-            {children}
+            <div className="flex max-w-[630px] flex-col items-center justify-center gap-20 self-center px-5 lg:max-w-full">
+              {children}
+            </div>
             <Footer />
           </Container>
         </ThemeProvider>

@@ -30,7 +30,7 @@ export default function Footer() {
 
         <div className="hidden max-w-[27.75rem] flex-col items-start justify-start gap-1 lg:flex">
           <p className="text-md font-semibold">О нас</p>
-          <p className="text-xss text-white/40">
+          <p className="text-xxs text-white/40">
             Присоединяйтесь к нам и окунитесь в захватывающий мир игр и
             технологий вместе с нашим комьюнити компьютерных энтузиастов!
           </p>
