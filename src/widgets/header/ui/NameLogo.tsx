@@ -13,7 +13,7 @@ const NameLogo = () => {
     <div className="left lg:absolute lg:left-2/4 lg:mt-auto lg:-translate-x-2/4">
       <Link onClick={handleClick} href={router}>
         <span
-          className="font-bicubik text-logo"
+          className="font-bicubik text-lg"
           style={{ WebkitTextStroke: '2px' }}
         >
           PC Aggregator

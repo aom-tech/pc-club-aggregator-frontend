@@ -15,20 +15,18 @@ const ClubInfo: React.FC = () => {
           sizes="100%"
         />
         <RatingClub
-          className="relative mb-6 mr-6 flex items-center justify-center gap-1 fill-yellow-400 font-bicubik text-[30px]/[28px] text-yellow-400"
+          className="relative mb-6 mr-6 flex items-center justify-center gap-1 fill-yellow-400 font-bicubik text-xl text-yellow-400"
           rating={4.95}
           fill={'yellow-400'}
         />
       </div>
       <section className="flex w-full flex-col gap-5 lg:justify-between">
-        <h1 className="font-bicubik text-h2 lg:text-h1">Беляево</h1>
+        <h1 className="font-bicubik text-xl lg:text-2xl">Беляево</h1>
         <article className="flex flex-col gap-2">
-          <h5 className="text-small lg:text-h5">
+          <h5 className="text-xs lg:text-sm">
             г. Москва, ул. Профсоюзная, 102а, этаж 2, ТЦ Белка
           </h5>
-          <h5 className="font-bicubik text-small lg:text-h5">
-            +7 (987) 654 3210
-          </h5>
+          <h5 className="font-bicubik text-xs lg:text-sm">+7 (987) 654 3210</h5>
         </article>
         <div className="flex gap-5">
           <AvailablePlaces title="PC" text="15 из 20" />
@@ -37,7 +35,7 @@ const ClubInfo: React.FC = () => {
         </div>
         <Button
           size="none"
-          className="rounded-none bg-indigo-600 px-5 py-5 font-bicubik text-[14px]/[32px] text-white hover:bg-indigo-600/90 lg:text-[20px]/[48px]"
+          className="text-3xs lg:text-md/[48px] rounded-none bg-indigo-600 px-5 py-5 font-bicubik text-white hover:bg-indigo-600/90"
         >
           Забронировать
         </Button>

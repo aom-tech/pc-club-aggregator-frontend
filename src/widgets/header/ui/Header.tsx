@@ -4,21 +4,21 @@ import NameLogo from './NameLogo'
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-10 flex items-center justify-between bg-background/90 px-6 py-6 lg:static lg:py-3">
+    <header className="sticky top-0 z-10 flex items-center justify-between bg-background/90 px-6 py-6 lg:static">
       <nav className="items-left hidden lg:flex">
         <ul className="flex flex-row gap-8">
           <li>
-            <a className="text-h4" href="#">
+            <a className="text-md" href="#">
               Главная
             </a>
           </li>
           <li>
-            <a className="text-h4" href="#about">
+            <a className="text-md" href="#about">
               О нас
             </a>
           </li>
           <li>
-            <a className="text-h4" href="#contact">
+            <a className="text-md" href="#contact">
               Контакты
             </a>
           </li>

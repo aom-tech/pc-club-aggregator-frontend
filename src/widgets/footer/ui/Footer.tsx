@@ -11,7 +11,7 @@ export default function Footer() {
 
       <div className="items-top flex flex-row justify-center gap-16">
         <div className="hidden flex-col items-start justify-start gap-1 lg:flex">
-          <p className="text-lg font-semibold">Контакты</p>
+          <p className="text-md font-semibold">Контакты</p>
           {links.map((link, index) => (
             <div key={index}>
               <Link
@@ -20,30 +20,32 @@ export default function Footer() {
                 target="_blank"
               >
                 <Image src={link.icon} alt="Logo" width={13} height={13} />
-                <span className="text-detail">{link.text}</span>
+                <span className="text-xxs text-white text-opacity-40">
+                  {link.text}
+                </span>
               </Link>
             </div>
           ))}
         </div>
 
         <div className="hidden max-w-[27.75rem] flex-col items-start justify-start gap-1 lg:flex">
-          <p className="text-lg font-semibold">О нас</p>
-          <p className="text-detail">
+          <p className="text-md font-semibold">О нас</p>
+          <p className="text-xxs text-white/40">
             Присоединяйтесь к нам и окунитесь в захватывающий мир игр и
             технологий вместе с нашим комьюнити компьютерных энтузиастов!
           </p>
         </div>
         <div className="flex flex-col items-center justify-start gap-1 sm:items-start">
-          <p className="hidden text-lg font-semibold lg:flex">Информация</p>
+          <p className="text-md hidden font-semibold lg:flex">Информация</p>
           <Link
             href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-            className="text-detail underline"
+            className="text-xxs text-white/40 underline"
           >
             Политика конфиденциальности
           </Link>
           <Link
             href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-            className="text-detail underline"
+            className="text-xxs text-white/40 underline"
           >
             Условия использования
           </Link>

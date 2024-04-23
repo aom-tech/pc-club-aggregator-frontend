@@ -5,7 +5,7 @@ interface AvailablePlacesProps {
 
 const AvailablePlaces: React.FC<AvailablePlacesProps> = ({ title, text }) => {
   return (
-    <div className="text-extrasmall flex w-full flex-col items-end gap-[10px] bg-white/20 p-5 font-bicubik sm:text-[14px]/[32px] lg:text-[20px]/[48px]">
+    <div className="lg:text-md/[48px] sm:text-3xs text-4xs flex w-full flex-col items-end gap-[10px] bg-white/20 p-5 font-bicubik">
       <span>{title}</span>
       <span>{text}</span>
     </div>
