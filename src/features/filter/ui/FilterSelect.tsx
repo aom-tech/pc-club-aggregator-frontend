@@ -13,13 +13,13 @@ import { useCallback } from 'react'
 interface FilterSelectProps {
   placeholder: string
   values: string[]
-  stateKey: string
+  queryParam: string
 }
 
 const FilterSelect: React.FC<FilterSelectProps> = ({
   placeholder,
   values,
-  stateKey,
+  queryParam,
 }) => {
   const router = useRouter()
   const pathname = usePathname()
@@ -39,9 +39,9 @@ const FilterSelect: React.FC<FilterSelectProps> = ({
   return (
     <Select
       onValueChange={(v) =>
-        router.push(pathname + '?' + createQueryString(stateKey, v))
+        router.push(pathname + '?' + createQueryString(queryParam, v))
       }
-      defaultValue={searchParams.get(stateKey) || ''}
+      defaultValue={searchParams.get(queryParam) || ''}
     >
       <SelectTrigger className="text-xxs bg-element h-[60px] rounded-none px-3 py-3 data-[placeholder]:text-white/40">
         <SelectValue placeholder={placeholder} />
