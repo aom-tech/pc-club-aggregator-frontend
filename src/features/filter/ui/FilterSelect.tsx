@@ -1,4 +1,5 @@
 'use client'
+
 import {
   Select,
   SelectContent,
@@ -6,8 +7,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/shared/ui/select'
-import { useContext } from 'react'
-import { FilterSelectContext } from './FilterSelectBlock'
+import { usePathname, useRouter, useSearchParams } from 'next/navigation'
+import { useCallback } from 'react'
 
 interface FilterSelectProps {
   placeholder: string
@@ -20,14 +21,29 @@ const FilterSelect: React.FC<FilterSelectProps> = ({
   values,
   stateKey,
 }) => {
-  const { setFilterData } = useContext(FilterSelectContext)
+  const router = useRouter()
+  const pathname = usePathname()
+  const searchParams = useSearchParams()
+
+  // Get a new searchParams string by merging the current
+  // searchParams with a provided key/value pair
+  const createQueryString = useCallback(
+    (name: string, value: string) => {
+      const params = new URLSearchParams(searchParams.toString())
+      params.set(name, value)
+
+      return params.toString()
+    },
+    [searchParams]
+  )
   return (
     <Select
       onValueChange={(v) =>
-        setFilterData((prev) => ({ ...prev, [stateKey]: v }))
+        router.push(pathname + '?' + createQueryString(stateKey, v))
       }
+      defaultValue={searchParams.get(stateKey) || ''}
     >
-      <SelectTrigger className="text-xxs h-[60px] rounded-none bg-[#3f3f3f]/30 px-3 py-3 data-[placeholder]:text-white/40">
+      <SelectTrigger className="text-xxs bg-element h-[60px] rounded-none px-3 py-3 data-[placeholder]:text-white/40">
         <SelectValue placeholder={placeholder} />
       </SelectTrigger>
       <SelectContent>
