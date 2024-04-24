@@ -8,7 +8,7 @@ export default function Header() {
       <nav className="items-left hidden lg:flex">
         <ul className="flex flex-row gap-8">
           <li>
-            <a className="text-md" href="#">
+            <a className="text-md" href="/">
               Главная
             </a>
           </li>

@@ -59,7 +59,7 @@ export default function HamburgerModal() {
           <ul className="mt-10 flex flex-col gap-8">
             <SheetClose asChild>
               <li>
-                <a className="text-md" href="#">
+                <a className="text-md" href="/">
                   Главная
                 </a>
               </li>
