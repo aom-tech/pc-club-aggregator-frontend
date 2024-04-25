@@ -5,7 +5,7 @@ import FilterInput from './FilterInput'
 
 const Filter: React.FC = () => {
   return (
-    <div className="flex w-full flex-col items-center gap-5 lg:w-[1024px] lg:flex-row">
+    <div className="mt-10 flex w-full flex-col items-center gap-5 lg:mt-[100px] lg:w-[1024px] lg:flex-row">
       <div className="flex w-full flex-col lg:flex-row">
         {filterSelectData.map((f) => (
           <FilterSelect key={`filterselect-${f.queryParam}`} {...f} />
