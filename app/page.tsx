@@ -1,5 +1,3 @@
-import Filter from '@/features/filter'
+import SearchPage from "@/views/search"
 
-export default function Home() {
-  return <Filter />
-}
+export default SearchPage;
