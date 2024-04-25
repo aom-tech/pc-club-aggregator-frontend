@@ -1,10 +1,10 @@
 import ClubList from './ClubList'
-// import Filter
+import Filter from '@/features/filter'
 
 const SearchPage: React.FC = () => {
   return (
     <>
-    {/* <Filter/> */}
+      <Filter/>
       <ClubList />
     </>
   )

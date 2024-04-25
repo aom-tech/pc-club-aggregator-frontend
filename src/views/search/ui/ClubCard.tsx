@@ -1,6 +1,6 @@
 import Image, { ImageProps } from 'next/image'
-import RatingClub from '@/shared/ui/RatingClub'
-import AvailablePlaces from '@/shared/ui/AvailablePlaces'
+import RatingClub from '@/entity/ui/RatingClub'
+import AvailablePlaces from '@/entity/ui/AvailablePlaces'
 import Link from 'next/link'
 
 interface ClubCardProps extends Omit<ImageProps, 'alt'> {

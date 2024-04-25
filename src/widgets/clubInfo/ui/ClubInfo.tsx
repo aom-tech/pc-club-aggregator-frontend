@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import RatingClub from '@/shared/ui/RatingClub'
-import AvailablePlaces from '@/shared/ui/AvailablePlaces'
+import RatingClub from '@/entity/ui/RatingClub'
+import AvailablePlaces from '@/entity/ui/AvailablePlaces'
 import { Button } from '@/shared/ui/button'
 
 const ClubInfo: React.FC = () => {
@@ -35,7 +35,7 @@ const ClubInfo: React.FC = () => {
         </div>
         <Button
           size="none"
-          className="text-3xs lg:text-md/[48px] rounded-none bg-indigo-600 px-5 py-5 font-bicubik text-white hover:bg-indigo-600/90"
+          className="rounded-none bg-indigo-600 px-5 py-5 font-bicubik text-3xs text-white hover:bg-indigo-600/90 lg:text-md/[48px]"
         >
           Забронировать
         </Button>
