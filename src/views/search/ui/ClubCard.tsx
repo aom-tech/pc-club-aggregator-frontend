@@ -27,9 +27,15 @@ const ClubCard: React.FC<ClubCardProps> = ({
   vipMax,
   ...props
 }) => {
+  const platforms = [
+    { title: 'PC', current: pcCurrent, max: pcMax },
+    { title: 'PS', current: psCurrent, max: psMax },
+    { title: 'VIP', current: vipCurrent, max: vipMax },
+  ]
+
   return (
     <Link href="/club">
-      <div className="flex w-full max-w-sm flex-col items-center bg-[#3f3f3f]/30 md:max-w-full lg:flex-row lg:gap-14">
+      <div className="flex w-full max-w-sm flex-col items-center bg-element/30 md:max-w-full lg:flex-row lg:gap-14">
         <div className="relative flex h-[182px] w-full max-w-full flex-col items-end justify-end lg:w-[333px]">
           <Image
             {...props}
@@ -51,33 +57,18 @@ const ClubCard: React.FC<ClubCardProps> = ({
             <p className="line-clamp-1 max-w-[33rem] text-xs">{address}</p>
           </div>
           <div className="flex gap-4">
-            <AvailablePlaces
-              title="PC"
-              text={
-                pcCurrent !== null && pcCurrent !== undefined
-                  ? `${pcCurrent} из ${pcMax}`
-                  : '-'
-              }
-              className="flex flex-col items-end gap-4 rounded bg-element/25 p-2 font-bicubik text-xxs md:w-40"
-            />
-            <AvailablePlaces
-              title="PS"
-              text={
-                psCurrent !== undefined && psCurrent !== null
-                  ? `${psCurrent} из ${psMax}`
-                  : '-'
-              }
-              className="flex flex-col items-end gap-4 rounded bg-element/25 p-2 font-bicubik text-xxs md:w-40"
-            />
-            <AvailablePlaces
-              title="VIP"
-              text={
-                vipCurrent !== null && vipCurrent !== undefined
-                  ? `${vipCurrent} из ${vipMax}`
-                  : '-'
-              }
-              className="flex flex-col items-end gap-4 rounded bg-element/25 p-2 font-bicubik text-xxs md:w-40"
-            />
+            {platforms.map(({ title, current, max }) => (
+              <AvailablePlaces
+                key={title}
+                title={title}
+                text={
+                  current !== null && current !== undefined
+                    ? `${current} из ${max}`
+                    : '-'
+                }
+                className="flex flex-col items-end gap-4 rounded bg-element/25 p-2 font-bicubik text-xxs md:w-40"
+              />
+            ))}
           </div>
         </div>
       </div>
