@@ -53,17 +53,29 @@ const ClubCard: React.FC<ClubCardProps> = ({
           <div className="flex gap-4">
             <AvailablePlaces
               title="PC"
-              text={pcCurrent ? `${pcCurrent} из ${pcMax}` : '-'}
+              text={
+                pcCurrent !== null && pcCurrent !== undefined
+                  ? `${pcCurrent} из ${pcMax}`
+                  : '-'
+              }
               className="flex flex-col items-end gap-4 rounded bg-element/25 p-2 font-bicubik text-xxs md:w-40"
             />
             <AvailablePlaces
               title="PS"
-              text={psCurrent ? `${psCurrent} из ${psMax}` : '-'}
+              text={
+                psCurrent !== undefined && psCurrent !== null
+                  ? `${psCurrent} из ${psMax}`
+                  : '-'
+              }
               className="flex flex-col items-end gap-4 rounded bg-element/25 p-2 font-bicubik text-xxs md:w-40"
             />
             <AvailablePlaces
               title="VIP"
-              text={vipCurrent ? `${vipCurrent} из ${vipMax}` : '-'}
+              text={
+                vipCurrent !== null && vipCurrent !== undefined
+                  ? `${vipCurrent} из ${vipMax}`
+                  : '-'
+              }
               className="flex flex-col items-end gap-4 rounded bg-element/25 p-2 font-bicubik text-xxs md:w-40"
             />
           </div>
