@@ -43,7 +43,7 @@ const FilterSelect: React.FC<FilterSelectProps> = ({
       }
       defaultValue={searchParams.get(queryParam) || ''}
     >
-      <SelectTrigger className="text-xxs bg-element h-[60px] rounded-none px-3 py-3 data-[placeholder]:text-white/40">
+      <SelectTrigger className="text-xxs bg-element/30 h-[60px] rounded-none px-3 py-3 data-[placeholder]:text-white/40">
         <SelectValue placeholder={placeholder} />
       </SelectTrigger>
       <SelectContent>
