@@ -45,7 +45,7 @@ const ClubCard: React.FC<ClubCardProps> = ({
             size={24}
           />
         </div>
-        <div className="flex flex-col items-center justify-between py-3 lg:mr-8 ">
+        <div className="flex flex-col items-start justify-between py-3 lg:mr-8 ">
           <div className="flex flex-col gap-1">
             <h1 className="line-clamp-1 font-bicubik text-xl">{name}</h1>
             <p className="line-clamp-1 max-w-[33rem] text-xs">{address}</p>
@@ -54,17 +54,17 @@ const ClubCard: React.FC<ClubCardProps> = ({
             <AvailablePlaces
               title="PC"
               text={pcCurrent ? `${pcCurrent} из ${pcMax}` : '-'}
-              className="flex flex-col items-end gap-4 rounded bg-white/20 p-2 font-bicubik text-xxs md:w-40"
+              className="flex flex-col items-end gap-4 rounded bg-element/25 p-2 font-bicubik text-xxs md:w-40"
             />
             <AvailablePlaces
               title="PS"
               text={psCurrent ? `${psCurrent} из ${psMax}` : '-'}
-              className="flex flex-col items-end gap-4 rounded bg-white/20 p-2 font-bicubik text-xxs md:w-40"
+              className="flex flex-col items-end gap-4 rounded bg-element/25 p-2 font-bicubik text-xxs md:w-40"
             />
             <AvailablePlaces
               title="VIP"
               text={vipCurrent ? `${vipCurrent} из ${vipMax}` : '-'}
-              className="flex flex-col items-end gap-4 rounded bg-white/20 p-2 font-bicubik text-xxs md:w-40"
+              className="flex flex-col items-end gap-4 rounded bg-element/25 p-2 font-bicubik text-xxs md:w-40"
             />
           </div>
         </div>
