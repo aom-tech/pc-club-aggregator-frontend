@@ -43,7 +43,7 @@ const FilterInput: React.FC<FilterInputProps> = ({
       pattern="\d*"
       min={0}
       placeholder={placeholder}
-      className="text-xxs bg-element h-[60px] rounded-none px-3 py-3 placeholder:text-white/40"
+      className="text-xxs bg-element/30 h-[60px] rounded-none px-3 py-3 placeholder:text-white/40"
     />
   )
 }
