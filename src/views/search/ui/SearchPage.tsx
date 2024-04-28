@@ -1,11 +1,14 @@
 import ClubList from './ClubList'
 import Filter from '@/features/filter'
 
-const SearchPage: React.FC = () => {
+interface SearchPageProps {
+  searchParams: { [K: string]: string }
+}
+const SearchPage: React.FC<SearchPageProps> = ({ searchParams }) => {
   return (
     <>
-      <Filter/>
-      <ClubList />
+      <Filter />
+      <ClubList searchParams={searchParams} />
     </>
   )
 }
