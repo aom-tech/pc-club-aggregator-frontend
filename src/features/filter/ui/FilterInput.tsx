@@ -38,7 +38,7 @@ const FilterInput: React.FC<FilterInputProps> = ({
         )
       }
       defaultValue={searchParams.get(queryParam) || ''}
-      type="text"
+      type="number"
       inputMode="numeric"
       pattern="\d*"
       min={0}
