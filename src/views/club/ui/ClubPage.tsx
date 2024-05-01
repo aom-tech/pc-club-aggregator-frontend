@@ -5,7 +5,11 @@ import ClubDescription from './ClubDescription'
 const ClubPage: React.FC = () => {
   return (
     <>
-      <Hero />
+      <Hero
+        title="Киберхаус"
+        description="Сеть компьютерных клубов для требовательных игроков"
+        src="/hero.jpg"
+      />
       <ClubInfo />
       <ClubDescription />
     </>
