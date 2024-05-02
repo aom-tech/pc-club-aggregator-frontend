@@ -7,6 +7,7 @@ import Container from '@/application/container'
 
 import Header from '@/widgets/header'
 import Footer from '@/widgets/footer'
+import { Toaster } from '@/shared/ui/toaster'
 
 const bicubik = localFont({
   variable: '--font-bicubik',
@@ -48,6 +49,7 @@ export default function RootLayout({
             </div>
             <Footer />
           </Container>
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>
