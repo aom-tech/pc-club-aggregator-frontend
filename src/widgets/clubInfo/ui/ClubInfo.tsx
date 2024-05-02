@@ -33,10 +33,7 @@ const ClubInfo: React.FC = () => {
           <AvailablePlaces title="PS" text="15 из 20" />
           <AvailablePlaces title="VIP" text="15 из 20" />
         </div>
-        <Button
-          size="none"
-          className="rounded-none bg-indigo-600 px-5 py-5 font-bicubik text-3xs text-white hover:bg-indigo-600/90 lg:text-md/[48px]"
-        >
+        <Button size="none" variant="purple">
           Забронировать
         </Button>
       </section>
