@@ -1,4 +1,5 @@
 'use client'
+
 import React, { useState } from 'react'
 import { Calendar } from '@/shared/ui/calendar'
 import { Button } from '@/shared/ui/button'
@@ -15,6 +16,13 @@ const BookPicker: React.FC = () => {
         mode="single"
         selected={chosenDate}
         onSelect={setChosenDate}
+        disabled={(date) => {
+          const today = new Date()
+          today.setDate(today.getDate() - 1)
+          const thirtyDaysFromNow = new Date()
+          thirtyDaysFromNow.setDate(today.getDate() + 30)
+          return date < today || date > thirtyDaysFromNow
+        }}
       />
       <div className="flex w-full flex-col gap-5">
         <div className="text-l gap-5 font-bicubik lg:text-xl">
