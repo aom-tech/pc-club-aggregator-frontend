@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import RatingClub from '@/entity/ui/RatingClub'
 import AvailablePlaces from '@/entity/ui/AvailablePlaces'
 import { Button } from '@/shared/ui/button'
@@ -36,8 +37,9 @@ const ClubInfo: React.FC = () => {
         <Button
           size="none"
           className="rounded-none bg-indigo-600 px-5 py-5 font-bicubik text-3xs text-white hover:bg-indigo-600/90 lg:text-md/[48px]"
+          asChild
         >
-          Забронировать
+          <Link href="/club/book">Забронировать</Link>
         </Button>
       </section>
     </main>
