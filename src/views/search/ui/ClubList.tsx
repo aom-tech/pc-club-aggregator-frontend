@@ -1,13 +1,18 @@
 import ClubCard from './ClubCard'
-import {clubsList} from '../model'
+import { filterClubs } from '../lib/filterClubs'
 
+interface SearchPageProps {
+  searchParams: { [K: string]: string }
+}
 
-const ClubList: React.FC = () => {
+const ClubList: React.FC<SearchPageProps> = ({ searchParams }) => {
+  const filteredClubs = filterClubs(searchParams)
+
   return (
     <main className="flex w-full flex-col gap-5 lg:max-w-[858px]">
       <h1 className="font-bicubik text-xl lg:text-2xl">Клубы</h1>
       <div className="flex flex-col gap-12">
-        {clubsList.map((club, index) => (
+        {filteredClubs.map((club, index) => (
           <ClubCard
             key={index}
             name={club.name}
