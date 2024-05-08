@@ -1,4 +1,3 @@
-import { toast } from '@/shared/ui/use-toast'
 import { UseFormReturn } from 'react-hook-form'
 
 export interface PhoneFormFields {
@@ -37,10 +36,7 @@ export const usePhone = (
   })
 
   const onSubmitPhone = ({ phoneNumber }: PhoneFormFields) => {
-    toast({
-      title: `Код отправлен на номер телефона ${phoneNumber}!`,
-      description: 'Ожидайте код в течении 2 минут',
-    })
+    // api thing
   }
 
   return { normalizePhoneInput, phoneInputRegister, onSubmitPhone }
