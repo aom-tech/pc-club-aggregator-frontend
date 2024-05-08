@@ -16,6 +16,7 @@ import {
   InputOTPSlot,
 } from '@/shared/ui/input-otp'
 import { REGEXP_ONLY_DIGITS } from 'input-otp'
+import { Check } from 'lucide-react'
 
 interface OTPInputFormProps {
   form: UseFormReturn<OTPFormFields, any, undefined>
@@ -36,7 +37,12 @@ const OTPInputForm: React.FC<OTPInputFormProps> = ({ form }) => {
             <FormItem>
               <FormLabel>Код из СМС</FormLabel>
               <FormControl>
-                <InputOTP maxLength={6} pattern={REGEXP_ONLY_DIGITS} {...field}>
+                <InputOTP
+                  disabled={form.formState.isSubmitSuccessful}
+                  maxLength={6}
+                  pattern={REGEXP_ONLY_DIGITS}
+                  {...field}
+                >
                   <InputOTPGroup>
                     <InputOTPSlot index={0} className="first:rounded-none" />
                     <InputOTPSlot index={1} />
@@ -59,9 +65,11 @@ const OTPInputForm: React.FC<OTPInputFormProps> = ({ form }) => {
           size="none"
           className={`h-12 bg-primary text-background hover:bg-primary/90 ${form.formState.errors.otp ? 'sm:self-center' : 'sm:self-end'} `}
           type="submit"
+          disabled={form.formState.isSubmitSuccessful}
         >
           Подтвердить
         </Button>
+        {form.formState.isSubmitSuccessful && <Check className="mb-3" />}
       </form>
     </Form>
   )
