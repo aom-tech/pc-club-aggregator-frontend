@@ -1,4 +1,3 @@
-'use client'
 import { UseFormReturn } from 'react-hook-form'
 import { OTPFormFields, useOTP } from '../lib/useOTP'
 import { Button } from '@/shared/ui/button'
@@ -61,7 +60,7 @@ const OTPInputForm: React.FC<OTPInputFormProps> = ({ form }) => {
           className="h-12 bg-primary text-background hover:bg-primary/90"
           type="submit"
         >
-          Отправить код
+          Подтвердить
         </Button>
       </form>
     </Form>

@@ -25,14 +25,14 @@ export const usePhone = (
   }
 
   const phoneInputRegister = form.register('phoneNumber', {
-    required: 'This field is required.',
+    required: 'Обязательное поле',
     pattern: {
       value: /\+\d \(\d{3}\) \d{3}-\d{4}/,
-      message: 'Wrong input',
+      message: 'Неверный формат телефона',
     },
     maxLength: {
       value: 17,
-      message: 'Exceed input length',
+      message: 'Превышена длина ввода',
     },
   })
 

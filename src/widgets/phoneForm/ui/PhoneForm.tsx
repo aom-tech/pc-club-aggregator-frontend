@@ -14,10 +14,17 @@ const PhoneForm: React.FC = () => {
     defaultValues: { otp: '' },
   })
 
-  return phoneForm.formState.isSubmitSuccessful ? (
-    <OTPInputForm form={otpForm} />
-  ) : (
-    <PhoneInputForm form={phoneForm} />
+  return (
+    <div className="flex w-full flex-col gap-5">
+      <h1 className="font-bicubik text-xl lg:text-2xl">
+        Введите номер телефона
+      </h1>
+      {phoneForm.formState.isSubmitSuccessful ? (
+        <OTPInputForm form={otpForm} />
+      ) : (
+        <PhoneInputForm form={phoneForm} />
+      )}
+    </div>
   )
 }
 
