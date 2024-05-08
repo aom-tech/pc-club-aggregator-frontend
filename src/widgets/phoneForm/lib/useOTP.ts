@@ -1,10 +1,11 @@
 import { toast } from '@/shared/ui/use-toast'
+import { UseFormReturn } from 'react-hook-form'
 
 export interface OTPFormFields {
   otp: string
 }
 
-export const useOTP = () => {
+export const useOTP = (form: UseFormReturn<OTPFormFields, any, undefined>) => {
   const onSubmitOTP = ({ otp }: OTPFormFields) => {
     if (otp == '123456') {
       toast({
@@ -12,9 +13,9 @@ export const useOTP = () => {
         description: 'Все верно',
       })
     } else {
-      toast({
-        title: 'Код подтвержения',
-        description: 'Ошибка! Код введен не верно!',
+      form.setError('otp', {
+        type: 'server',
+        message: 'Неправильный код подтверждения',
       })
     }
   }

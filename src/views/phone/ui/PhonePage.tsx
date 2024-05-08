@@ -1,5 +1,4 @@
 import Hero from '@/entity/ui/Hero'
-import SubmitForm from './SubmitForm'
 import PhoneForm from '@/widgets/phoneForm'
 
 const PhonePage: React.FC = () => {
@@ -11,7 +10,6 @@ const PhonePage: React.FC = () => {
         src="/club-photo.webp"
       />
       <PhoneForm />
-      <SubmitForm />
     </>
   )
 }

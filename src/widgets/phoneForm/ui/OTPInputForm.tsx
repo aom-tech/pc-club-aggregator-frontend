@@ -22,12 +22,12 @@ interface OTPInputFormProps {
 }
 
 const OTPInputForm: React.FC<OTPInputFormProps> = ({ form }) => {
-  const { onSubmitOTP } = useOTP()
+  const { onSubmitOTP } = useOTP(form)
   return (
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmitOTP)}
-        className="flex items-end gap-5"
+        className="flex flex-col items-center gap-5 sm:flex-row sm:items-end"
       >
         <FormField
           control={form.control}
@@ -57,7 +57,7 @@ const OTPInputForm: React.FC<OTPInputFormProps> = ({ form }) => {
         <Button
           variant="purple"
           size="none"
-          className="h-12 bg-primary text-background hover:bg-primary/90"
+          className={`h-12 bg-primary text-background hover:bg-primary/90 ${form.formState.errors.otp ? 'sm:self-center' : 'sm:self-end'} `}
           type="submit"
         >
           Подтвердить

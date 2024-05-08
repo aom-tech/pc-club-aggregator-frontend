@@ -23,7 +23,7 @@ const PhoneInputForm: React.FC<PhoneInputFormProps> = ({ form }) => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmitPhone)}
-        className="flex flex-row items-center gap-5"
+        className="flex flex-col items-center gap-5 sm:flex-row sm:items-end"
       >
         <FormField
           control={form.control}
@@ -50,7 +50,7 @@ const PhoneInputForm: React.FC<PhoneInputFormProps> = ({ form }) => {
         <Button
           variant="purple"
           size="none"
-          className={`h-12 bg-primary text-background hover:bg-primary/90 ${form.formState.errors.phoneNumber ? 'self-center' : 'self-end'} `}
+          className={`h-12 bg-primary text-background hover:bg-primary/90 ${form.formState.errors.phoneNumber ? 'sm:self-center' : 'sm:self-end'} `}
           type="submit"
         >
           Отправить код
