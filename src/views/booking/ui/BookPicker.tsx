@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import { Calendar } from '@/shared/ui/calendar'
 import { Button } from '@/shared/ui/button'
 import TimeSelector from './TimeSelector'
-import { format } from 'date-fns'
+import { format, isBefore, isAfter, addDays } from 'date-fns'
 import { ru } from 'date-fns/locale'
 
 const BookPicker: React.FC = () => {
@@ -12,16 +12,14 @@ const BookPicker: React.FC = () => {
   return (
     <div className="flex w-full flex-col items-center gap-5 sm:flex-row sm:items-stretch">
       <Calendar
-        className="border "
+        className="border"
         mode="single"
         selected={chosenDate}
         onSelect={setChosenDate}
         disabled={(date) => {
           const today = new Date()
           today.setDate(today.getDate() - 1)
-          const thirtyDaysFromNow = new Date()
-          thirtyDaysFromNow.setDate(today.getDate() + 30)
-          return date < today || date > thirtyDaysFromNow
+          return isBefore(date, today) || isAfter(date, addDays(today, 30));
         }}
       />
       <div className="flex w-full flex-col gap-5">
