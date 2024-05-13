@@ -7,6 +7,12 @@ import TimeSelector from './TimeSelector'
 import { format, isBefore, isAfter, addDays } from 'date-fns'
 import { ru } from 'date-fns/locale'
 
+const disabledDate = (date: Date) => {
+  const today = new Date();
+  today.setDate(today.getDate() - 1);
+  return isBefore(date, today) || isAfter(date, addDays(today, 30));
+};
+
 const BookPicker: React.FC = () => {
   const [chosenDate, setChosenDate] = useState<Date | undefined>(new Date())
   return (
@@ -16,11 +22,7 @@ const BookPicker: React.FC = () => {
         mode="single"
         selected={chosenDate}
         onSelect={setChosenDate}
-        disabled={(date) => {
-          const today = new Date()
-          today.setDate(today.getDate() - 1)
-          return isBefore(date, today) || isAfter(date, addDays(today, 30));
-        }}
+        disabled={disabledDate}
       />
       <div className="flex w-full flex-col gap-5">
         <div className="text-l gap-5 font-bicubik lg:text-xl">
