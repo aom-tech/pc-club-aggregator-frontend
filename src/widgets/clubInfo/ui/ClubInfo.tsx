@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import RatingClub from '@/entity/ui/RatingClub'
 import AvailablePlaces from '@/entity/ui/AvailablePlaces'
 import { Button } from '@/shared/ui/button'
@@ -33,8 +34,8 @@ const ClubInfo: React.FC = () => {
           <AvailablePlaces title="PS" text="15 из 20" />
           <AvailablePlaces title="VIP" text="15 из 20" />
         </div>
-        <Button size="none" variant="purple">
-          Забронировать
+        <Button size="none" variant="purple" asChild>
+          <Link href="/club/booking">Забронировать</Link>
         </Button>
       </section>
     </main>
