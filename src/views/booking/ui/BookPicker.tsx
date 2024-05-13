@@ -6,12 +6,13 @@ import { Button } from '@/shared/ui/button'
 import TimeSelector from './TimeSelector'
 import { format, isBefore, isAfter, addDays } from 'date-fns'
 import { ru } from 'date-fns/locale'
+import Link from 'next/link'
 
 const disabledDate = (date: Date) => {
-  const today = new Date();
-  today.setDate(today.getDate() - 1);
-  return isBefore(date, today) || isAfter(date, addDays(today, 30));
-};
+  const today = new Date()
+  today.setDate(today.getDate() - 1)
+  return isBefore(date, today) || isAfter(date, addDays(today, 30))
+}
 
 const BookPicker: React.FC = () => {
   const [chosenDate, setChosenDate] = useState<Date | undefined>(new Date())
@@ -33,11 +34,8 @@ const BookPicker: React.FC = () => {
           <p>Ваши Места - 205, 206, 207</p>
         </div>
         <TimeSelector />
-        <Button
-          size="none"
-          className="h-[60px] rounded-none bg-indigo-600 px-5 py-2 font-bicubik text-3xs text-white hover:bg-indigo-600/90 lg:text-md/[48px]"
-        >
-          Забронировать
+        <Button size="none" variant="purple" asChild>
+          <Link href="/club/booking/phone">Забронировать</Link>
         </Button>
       </div>
     </div>

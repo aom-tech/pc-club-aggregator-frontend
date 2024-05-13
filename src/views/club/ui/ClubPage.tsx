@@ -7,7 +7,8 @@ const ClubPage: React.FC = () => {
     <>
       <Hero
         title="Киберхаус"
-        text="Сеть компьютерных клубов для требовательных игроков"
+        description="Сеть компьютерных клубов для требовательных игроков"
+        src="/hero.jpg"
       />
       <ClubInfo />
       <ClubDescription />
