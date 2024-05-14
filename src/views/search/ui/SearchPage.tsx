@@ -8,7 +8,7 @@ interface SearchPageProps {
 const SearchPage: React.FC<SearchPageProps> = ({ searchParams }) => {
   return (
     <>
-      <Suspense>
+      <Suspense key={`${searchParams}`}>
         <Filter />
       </Suspense>
       <ClubList searchParams={searchParams} />
