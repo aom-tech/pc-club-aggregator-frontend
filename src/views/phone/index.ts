@@ -1,3 +1,3 @@
-import PhoneForm from './ui/PhoneForm'
+import PhonePage from './ui/PhonePage'
 
-export default PhoneForm
+export default PhonePage

@@ -1,3 +1,3 @@
-import PhonePage from '@/views/phone/ui/PhonePage'
+import PhonePage from '@/views/phone'
 
 export default PhonePage

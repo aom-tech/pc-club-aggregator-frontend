@@ -1,3 +1,4 @@
+import { Suspense } from 'react'
 import ClubList from './ClubList'
 import Filter from '@/features/filter'
 
@@ -7,7 +8,9 @@ interface SearchPageProps {
 const SearchPage: React.FC<SearchPageProps> = ({ searchParams }) => {
   return (
     <>
-      <Filter />
+      <Suspense>
+        <Filter />
+      </Suspense>
       <ClubList searchParams={searchParams} />
     </>
   )
