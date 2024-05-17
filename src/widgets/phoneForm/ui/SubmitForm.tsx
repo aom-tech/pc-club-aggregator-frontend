@@ -17,7 +17,7 @@ const SubmitForm: React.FC<SubmitFormProps> = ({ ableNext }) => {
         className="w-full sm:w-[60%]"
         disabled={!ableNext}
       >
-        Далее
+        <Link href="/club/booking/phone/successful">Далее</Link>
       </Button>
     </div>
   )
