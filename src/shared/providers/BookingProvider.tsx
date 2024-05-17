@@ -27,8 +27,8 @@ const BookingProvider: React.FC<PropsWithChildren> = ({ children }) => {
   const [bookingInfo, setBookingInfo] = useState<BookingInfo>({
     date: new Date(),
     seats: [205, 206, 207],
-    timeTo: '',
-    timeFrom: '',
+    timeTo: '13:00',
+    timeFrom: '14:00',
   })
   return (
     <BookingContext.Provider value={{ bookingInfo, setBookingInfo }}>

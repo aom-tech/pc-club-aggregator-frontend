@@ -20,7 +20,7 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: 'PC Aggregator',
-  description: 'Made by AOM',
+  description: 'AOM',
 }
 
 export default function RootLayout({
