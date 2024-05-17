@@ -28,7 +28,7 @@ const OTPInputForm: React.FC<OTPInputFormProps> = ({ form }) => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmitOTP)}
-        className="flex flex-col items-center gap-5 sm:flex-row sm:items-end"
+        className="flex flex-col items-center justify-center gap-5 sm:flex-row"
       >
         <FormField
           control={form.control}
@@ -60,16 +60,20 @@ const OTPInputForm: React.FC<OTPInputFormProps> = ({ form }) => {
             </FormItem>
           )}
         />
-        <Button
-          variant="purple"
-          size="none"
-          className={`h-12 bg-primary text-background hover:bg-primary/90 ${form.formState.errors.otp ? 'sm:self-center' : 'sm:self-end'} `}
-          type="submit"
-          disabled={form.formState.isSubmitSuccessful}
+        <div
+          className={`flex items-center gap-5 ${form.formState.errors.otp ? 'sm:self-center' : 'sm:self-end'}`}
         >
-          Подтвердить
-        </Button>
-        {form.formState.isSubmitSuccessful && <Check className="mb-3" />}
+          <Button
+            variant="purple"
+            size="none"
+            className="h-12 bg-primary text-background hover:bg-primary/90"
+            type="submit"
+            disabled={form.formState.isSubmitSuccessful}
+          >
+            Подтвердить
+          </Button>
+          {form.formState.isSubmitSuccessful && <Check />}
+        </div>
       </form>
     </Form>
   )

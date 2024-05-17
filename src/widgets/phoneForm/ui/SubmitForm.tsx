@@ -7,11 +7,16 @@ interface SubmitFormProps {
 
 const SubmitForm: React.FC<SubmitFormProps> = ({ ableNext }) => {
   return (
-    <div className="flex w-full flex-col gap-5">
-      <Button variant="red" size="none" asChild>
+    <div className="flex w-full flex-col items-center gap-5">
+      <Button variant="red" size="none" className="w-full sm:w-[60%]" asChild>
         <Link href="/club/booking">Назад</Link>
       </Button>
-      <Button variant="purple" size="none" disabled={!ableNext}>
+      <Button
+        variant="purple"
+        size="none"
+        className="w-full sm:w-[60%]"
+        disabled={!ableNext}
+      >
         Далее
       </Button>
     </div>
