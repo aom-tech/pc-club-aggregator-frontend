@@ -1,5 +1,5 @@
 import ClubInfo from '@/widgets/clubInfo'
-import Hero from '@/entity/ui/Hero'
+import Hero from '@/entities/ui/Hero'
 import ClubDescription from './ClubDescription'
 
 const ClubPage: React.FC = () => {

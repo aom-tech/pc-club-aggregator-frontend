@@ -23,7 +23,7 @@ const PhoneInputForm: React.FC<PhoneInputFormProps> = ({ form }) => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmitPhone)}
-        className="flex flex-col items-center gap-5 sm:flex-row sm:items-end"
+        className="flex flex-col items-center justify-center gap-5 sm:flex-row"
       >
         <FormField
           control={form.control}

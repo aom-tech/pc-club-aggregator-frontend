@@ -1,12 +1,14 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
 import { Calendar } from '@/shared/ui/calendar'
 import { Button } from '@/shared/ui/button'
 import TimeSelector from './TimeSelector'
 import { format, isBefore, isAfter, addDays } from 'date-fns'
 import { ru } from 'date-fns/locale'
 import Link from 'next/link'
+import { BookingContext } from '@/shared/providers/BookingProvider'
+import { SelectSingleEventHandler } from 'react-day-picker'
 
 const disabledDate = (date: Date) => {
   const today = new Date()
@@ -15,7 +17,15 @@ const disabledDate = (date: Date) => {
 }
 
 const BookPicker: React.FC = () => {
-  const [chosenDate, setChosenDate] = useState<Date | undefined>(new Date())
+  const { bookingInfo, setBookingInfo } = useContext(BookingContext)
+  const chosenDate = bookingInfo.date
+  const setChosenDate: SelectSingleEventHandler = (
+    day,
+    selectedDay,
+    activeModifiers,
+    e
+  ) => setBookingInfo((prev) => ({ ...prev, date: selectedDay }))
+
   return (
     <div className="flex w-full flex-col items-center gap-5 sm:flex-row sm:items-stretch">
       <Calendar
@@ -31,7 +41,7 @@ const BookPicker: React.FC = () => {
             Дата -{' '}
             {chosenDate ? format(chosenDate, 'd MMMM', { locale: ru }) : ''}
           </p>
-          <p>Ваши Места - 205, 206, 207</p>
+          <p>Ваши Места - {bookingInfo.seats.join(', ')}</p>
         </div>
         <TimeSelector />
         <Button size="none" variant="purple" asChild>

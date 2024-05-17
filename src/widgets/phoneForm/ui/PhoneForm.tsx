@@ -18,9 +18,6 @@ const PhoneForm: React.FC = () => {
   return (
     <div className="flex w-full flex-col gap-20">
       <section className="flex w-full flex-col gap-5">
-        <h1 className="font-bicubik text-xl lg:text-2xl">
-          Введите номер телефона
-        </h1>
         {phoneForm.formState.isSubmitSuccessful ? (
           <OTPInputForm form={otpForm} />
         ) : (
