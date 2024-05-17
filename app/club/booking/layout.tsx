@@ -1,4 +1,5 @@
 import Hero from '@/entity/ui/Hero'
+import { BookingProvider } from '@/shared/providers/BookingProvider'
 
 export default function Layout({
   children,
@@ -12,7 +13,7 @@ export default function Layout({
         description="Компьютерный клуб для требовательных игроков"
         src="/club-photo.webp"
       />
-      {children}
+      <BookingProvider>{children}</BookingProvider>
     </>
   )
 }
