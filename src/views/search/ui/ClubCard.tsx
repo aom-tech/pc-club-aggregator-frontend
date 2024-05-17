@@ -1,6 +1,6 @@
 import Image, { ImageProps } from 'next/image'
-import RatingClub from '@/entity/ui/RatingClub'
-import AvailablePlaces from '@/entity/ui/AvailablePlaces'
+import RatingClub from '@/entities/ui/RatingClub'
+import AvailablePlaces from '@/entities/ui/AvailablePlaces'
 import Link from 'next/link'
 
 interface ClubCardProps extends Omit<ImageProps, 'alt'> {
@@ -51,12 +51,12 @@ const ClubCard: React.FC<ClubCardProps> = ({
             size={24}
           />
         </div>
-        <div className="flex flex-col items-start justify-between py-3 lg:mr-8 px-4 lg:px-0">
+        <div className="flex flex-col items-start justify-between px-4 py-3 lg:mr-8 lg:px-0">
           <div className="flex flex-col gap-1">
             <h1 className="line-clamp-1 font-bicubik text-xl">{name}</h1>
             <p className="line-clamp-1 max-w-[33rem] text-xs">{address}</p>
           </div>
-          <div className="flex gap-4 w-full">
+          <div className="flex w-full gap-4">
             {platforms.map(({ title, current, max }) => (
               <AvailablePlaces
                 key={title}
@@ -66,7 +66,7 @@ const ClubCard: React.FC<ClubCardProps> = ({
                     ? `${current} из ${max}`
                     : '-'
                 }
-                className="flex flex-col items-end gap-4 rounded bg-element/25 p-2 font-bicubik text-xxs md:w-40 grow w-0"
+                className="flex w-0 grow flex-col items-end gap-4 rounded bg-element/25 p-2 font-bicubik text-xxs md:w-40"
               />
             ))}
           </div>

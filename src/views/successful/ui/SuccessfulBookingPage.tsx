@@ -30,7 +30,12 @@ const SuccessfulBookingPage: React.FC = () => {
           </h3>
         </div>
         <h4>Контакты - 8 (800) 5555-3535</h4>
-        <Button variant="purple" size="none" className="w-full lg:w-[80%]">
+        <Button
+          variant="purple"
+          size="none"
+          className="w-full lg:w-[80%]"
+          asChild
+        >
           <Link href="/">На главную</Link>
         </Button>
       </div>

@@ -1,4 +1,4 @@
-import Hero from '@/entity/ui/Hero'
+import Hero from '@/entities/ui/Hero'
 import { BookingProvider } from '@/shared/providers/BookingProvider'
 
 export default function Layout({
